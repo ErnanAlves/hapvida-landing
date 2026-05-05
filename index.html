@@ -84,7 +84,19 @@
     .carencia-prazo { font-weight: 700; color: #003087; font-size: 0.9rem; margin-bottom: 0.5rem; }
     .carencia-desc { color: #555; }
     
-    /* FAQ */
+    /* INDICAÇÕES */
+    .indicacoes { background: linear-gradient(135deg, #E6F1FB 0%, #F0F5FF 100%); padding: 4rem 1.5rem; }
+    .indicacoes h2 { text-align: center; color: #003087; margin-bottom: 0.5rem; }
+    .indicacoes > .container > p { text-align: center; color: #666; margin-bottom: 2rem; }
+    .indicacoes-content { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2rem; }
+    .indicacao-card { background: white; padding: 2rem; border-radius: 1rem; border: 1px solid #ddd; text-align: center; }
+    .indicacao-icon { font-size: 3rem; margin-bottom: 1rem; display: block; }
+    .indicacao-card strong { display: block; color: #003087; margin-bottom: 0.5rem; font-size: 1.1rem; }
+    .indicacao-card p { color: #666; font-size: 0.95rem; margin: 0; }
+    .indicacao-note { text-align: center; color: #999; font-size: 0.9rem; margin-top: 1rem; }
+    .indicacoes .btn-primary { display: block; margin: 0 auto; }
+    
+    /* FAQ -->
     .faq { padding: 4rem 1.5rem; max-width: 900px; margin: 0 auto; }
     .faq h2 { text-align: center; color: #003087; margin-bottom: 2rem; }
     .faq-item { border: 1px solid #ddd; border-radius: 0.5rem; margin-bottom: 1rem; overflow: hidden; }
@@ -105,6 +117,9 @@
     
     /* FOOTER */
     .footer { background: #111; color: #999; padding: 2rem 1.5rem; text-align: center; font-size: 0.9rem; }
+    .footer-logos { display: flex; justify-content: center; align-items: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .footer-logos img { height: 40px; object-fit: contain; }
+    .footer p { margin-bottom: 0.5rem; }
     
     /* RESPONSIVE */
     @media (max-width: 768px) {
@@ -127,12 +142,16 @@
   <section class="hero">
     <div class="container">
       <div>
-        <div class="hero-badge">✓ Plano Empresarial Hapvida 2026</div>
-        <h1>Saúde de alto padrão por menos que você paga agora</h1>
-        <p>Qualquer MEI, autônomo ou empresa pode ter plano empresarial Hapvida. <strong>Economize até 30%</strong> e tenha carência zero em consultas e urgência/emergência.</p>
+        <div class="hero-badge">✓ Representante Autorizado de Vendas Hapvida</div>
+        <h1>Seu CNPJ ou MEI pode garantir acesso ao plano empresarial</h1>
+        <p>Seu CNPJ ou MEI pode garantir acesso ao plano empresarial Hapvida com mensalidades mais econômicas, cobertura completa e benefícios exclusivos. <strong>Economize até 30%</strong>.</p>
         <div class="hero-buttons">
           <button class="btn-primary" onclick="document.getElementById('form-section').scrollIntoView({behavior: 'smooth'})">Simular plano agora →</button>
           <a href="https://wa.me/5585960002222?text=Olá! Gostaria de saber mais sobre planos Hapvida empresarial." target="_blank" class="btn-secondary">Falar no WhatsApp</a>
+        </div>
+        <div style="display: flex; gap: 1.5rem; align-items: center; margin-top: 1.5rem; flex-wrap: wrap;">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/5/54/Logo_Hapvida.svg" alt="Hapvida" style="height: 35px; object-fit: contain;">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/96/Logo_NotredamE.svg/220px-Logo_NotredamE.svg.png" alt="NotreDame Intermédica" style="height: 35px; object-fit: contain;">
         </div>
       </div>
       <div>
@@ -219,16 +238,16 @@
 
       <div class="testimonial">
         <div class="stars">★★★★★</div>
-        <p>"Consegui contratar plano empresarial para meus 8 funcionários por menos do que pagava sozinho. Melhor decisão que tomei."</p>
+        <p>"Consegui contratar plano empresarial para meus 5 funcionários da lanchonete por menos do que pagava sozinho. Melhor decisão que tomei."</p>
         <div class="testimonial-author">Marco Silva</div>
-        <div class="testimonial-company">Dono de PME · Fortaleza</div>
+        <div class="testimonial-company">Dono de Lanchonete · Fortaleza</div>
       </div>
 
       <div class="testimonial">
         <div class="stars">★★★★★</div>
-        <p>"Não sabia que podia ter plano empresarial sendo autônoma. Agora tenho saúde de alto padrão por um preço que cabe no meu bolso."</p>
+        <p>"Como dona de salão de beleza, consegui um plano que cabe no meu bolso. Agora tenho saúde de alto padrão com as melhores condições."</p>
         <div class="testimonial-author">Ana Costa</div>
-        <div class="testimonial-company">Autônoma/PJ · Fortaleza</div>
+        <div class="testimonial-company">Dona de Salão de Beleza · Fortaleza</div>
       </div>
     </div>
   </section>
@@ -239,12 +258,8 @@
     <p>Confira o que você pode usar desde o primeiro dia</p>
     <div class="carencias-grid">
       <div class="carencia-item">
-        <div class="carencia-prazo">1º dia</div>
-        <div class="carencia-desc">Urgência, emergência e complicações gestacionais</div>
-      </div>
-      <div class="carencia-item">
-        <div class="carencia-prazo">1º dia</div>
-        <div class="carencia-desc">Consultas médicas e exames simples</div>
+        <div class="carencia-prazo">24h após liberação</div>
+        <div class="carencia-desc">Urgência, emergência, consultas e exames simples</div>
       </div>
       <div class="carencia-item">
         <div class="carencia-prazo">60 dias</div>
@@ -261,6 +276,10 @@
       <div class="carencia-item">
         <div class="carencia-prazo">720 dias</div>
         <div class="carencia-desc">Doenças e lesões preexistentes</div>
+      </div>
+      <div class="carencia-item">
+        <div class="carencia-prazo">24h</div>
+        <div class="carencia-desc">Complicações gestacionais</div>
       </div>
     </div>
   </section>
@@ -333,6 +352,39 @@
     </div>
   </section>
 
+  <!-- INDICAÇÕES -->
+  <section class="indicacoes">
+    <div class="container">
+      <h2>Indique e Ganhe Bônus!</h2>
+      <p>Ganhe de R$ 50 a R$ 100 a cada pessoa que você indicar para o plano empresarial Hapvida.</p>
+      <div class="indicacoes-content">
+        <div class="indicacao-card">
+          <div class="indicacao-icon">👥</div>
+          <div class="indicacao-text">
+            <strong>Indique um amigo ou cliente</strong>
+            <p>Compartilhe seu código de indicação ou envie direto pelo WhatsApp</p>
+          </div>
+        </div>
+        <div class="indicacao-card">
+          <div class="indicacao-icon">✅</div>
+          <div class="indicacao-text">
+            <strong>Ele contrata o plano</strong>
+            <p>Assim que a carteirinha for liberada, você ganha o bônus</p>
+          </div>
+        </div>
+        <div class="indicacao-card">
+          <div class="indicacao-icon">💰</div>
+          <div class="indicacao-text">
+            <strong>Receba de R$ 50 a R$ 100</strong>
+            <p>Dependendo do plano contratado. Consulte regulamento completo</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn-primary" onclick="document.getElementById('form-section').scrollIntoView({behavior: 'smooth'})">Começar a Indicar →</button>
+      <p class="indicacao-note">*Consulte o regulamento completo de indicações</p>
+    </div>
+  </section>
+
   <!-- CTA FINAL -->
   <section class="cta-final">
     <div class="container">
@@ -344,7 +396,16 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>Atendimento especializado em planos Hapvida em Fortaleza e todo Brasil</p>
+    <div class="footer-logos">
+      <div style="text-align: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/5/54/Logo_Hapvida.svg" alt="Hapvida" style="height: 50px; margin-bottom: 0.5rem;">
+      </div>
+      <div style="text-align: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/96/Logo_NotredamE.svg/220px-Logo_NotredamE.svg.png" alt="NotreDame Intermédica" style="height: 50px; margin-bottom: 0.5rem;">
+      </div>
+    </div>
+    <p><strong>Representantes Autorizados:</strong> Hapvida NotreDame Intermédica</p>
+    <p>Atendimento especializado em planos de saúde empresarial em Fortaleza e todo Brasil</p>
     <p>© 2026 — Análise gratuita e sem compromisso de migração de plano de saúde</p>
   </footer>
 
